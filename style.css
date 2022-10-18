@@ -1,0 +1,216 @@
+body {
+  min-height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #7c99ff, #d8a4c7);
+  font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.board {
+  width: 1200px;
+  height: 450px;
+  display: flex;
+}
+
+.section {
+  width: 25%;
+  position: relative;
+  border-radius: 10px;
+}
+
+.section h1 {
+  top: 0;
+  text-align: center;
+  margin: 0;
+  background-color: rgb(102, 50, 150);
+  color: antiquewhite;
+  width: 100%;
+}
+.color1 {
+  background-color: rgb(221, 170, 170);
+}
+
+.color2 {
+  background-color: rgb(255, 255, 151);
+}
+
+.color3 {
+  background-color: rgb(116, 147, 208);
+}
+
+.color4 {
+  background-color: rgb(109, 141, 109);
+}
+
+/* button za dodavanje nov task*/
+.addBtn {
+  padding: 3px;
+  background-color: #d8d2d2;
+  color: rgb(60, 60, 60);
+  width: 75%;
+  font-size: 22px;
+  margin-left: 38px;
+  margin-top: 30px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.addBtn:hover {
+  background-color: rgb(85, 82, 82);
+}
+
+/*lista na taskovi koi se dodadeni*/
+.taskslist {
+  cursor: pointer;
+  list-style-type: none;
+  padding: 5px;
+  background: rgb(255, 249, 249);
+  color: rgb(45, 46, 45);
+  font-size: 18px;
+  transition: 0.2s;
+  float: left;
+  width: 220px;
+  border-radius: 1px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-left: 0px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.taskslist:hover {
+  background: #ddd;
+}
+
+/* MODAL - FOR ADD BUTTON */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 140px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.modal .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+  background-color: rgb(150, 150, 131);
+  color: white;
+  width: 500px;
+  margin-left: 500px;
+}
+
+/* X button in modal*/
+.closeModal {
+  color: #393535;
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 180px;
+  float: right;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+  background-color: rgb(61, 58, 58);
+  color: white;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*Done button za dodavanje nov task*/
+.doneBtn {
+  margin-left: 800px;
+  margin-right: 300px;
+  padding: 10px 10px 10px 10px;
+  float: left;
+  background: #4caf50;
+  color: rgb(242, 249, 242);
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 2px;
+  margin-top: 10px;
+  width: 200px;
+  height: 45px;
+  border: none;
+}
+div h3 {
+  /*za naslovot*/
+  margin-top: 1px;
+  font-size: 45px;
+  border-bottom: 4px solid antiquewhite;
+  text-align: center;
+  color: antiquewhite;
+}
+#inputTask {
+  border: none;
+  border-radius: 3px;
+  width: 500px;
+  padding: 20px;
+  float: left;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-left: 500px;
+}
+
+#description {
+  width: 500px;
+  padding: 20px;
+  float: left;
+  font-size: 16px;
+  height: 70px;
+  margin-left: 500px;
+  border: none;
+}
+
+.dropdownMenu {
+  margin-left: 505px;
+  font-size: 25px;
+  float: left;
+  color: rgb(46, 44, 44);
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+.modal.active {
+  top: 15%;
+}
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#overlay.active {
+  display: block;
+}
+
+ul li.checked {
+  background: rgb(136, 127, 127);
+  color: #fff;
+  text-decoration: line-through;
+}
