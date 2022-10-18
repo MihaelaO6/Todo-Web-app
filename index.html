@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To do app</title>
+  </head>
+  <body>
+     <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <form>
+                <div class="header">
+                  <h2>Add new TO DO task</h2>
+                <span class="closeModal">&times;</span>
+                </div>
+                <input type="text" id="inputTask" placeholder="Add a new task" />
+                <!--<input type="text" placeholder="Description" id="description"> 
+                <div class="dropdownMenu">
+                  <label for="priority" id="dropdown">Choose a priority:</label>
+                  <select id="priority" name="priority">
+                    <option value="none">none</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                    <option value="highest">Highest</option>
+                  </select>
+                </div> -->
+                <span onclick="addNewElement()" class="doneBtn">Add task</span>
+            </form>
+      </div>
+
+    <!--TO DO SECTIONS-->
+
+    <div class="header1">
+      <h3>TO DO Tasks</h3>
+    <div class="board">
+      <div class="section color1" id="alltasks">
+        <h1>All tasks</h1>
+        <button class="addBtn" id="myBtn" data-target="#myModal">
+          Add new task <span style="float: right">&oplus;</span>   <!--Button so koj se klika za da se otvori modalot-->
+        </button>
+          <ul id="myUL">
+            <li draggable="true" class="checked taskslist">
+             Task 1 example 
+            </li>
+            <li class="taskslist" draggable="true">
+              item2
+            </li>
+          </ul>
+      </div>
+      <div class="section color2" id="progress">
+        <h1>In progress</h1>
+      </div>
+      <div class="section color3" id="qa">
+        <h1>QA</h1>
+      </div>
+      <div class="section color4" id="donetasks">
+        <h1>Done tasks</h1>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!--
+  todo-container =>  board
+  status =>  section
+  todo =>  taskslist
+  Added is: class for UL and Li, and the tasks are in list as a list items 
+-->
